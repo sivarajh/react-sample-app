@@ -1,12 +1,20 @@
 import React from 'react';
 import './style.css';
 import Card from './UI/Card';
+import AddUser from './UI/Components/AddUser';
+import UsersList from './UI/Components/UsersList';
 
 export default function App() {
+  const users = [
+    {
+      name: 'hairhara',
+      age: '12',
+    },
+  ];
   return (
     <Card>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <AddUser />
+      <UsersList users={users} />
     </Card>
   );
 }
